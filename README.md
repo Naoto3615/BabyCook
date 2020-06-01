@@ -16,21 +16,22 @@
 - VSCode（Visual Studio Code）  
 
 ## :green_book: アプリ機能
-レシピを見る
-![recipe_index.png] (https://github.com/Naoto3615/BabyCook/blob/master/recipe_index.png)
+○レシピを見る
 
-* System dependencies
+　ユーザーが投稿したレシピ一覧です。
+　トップページの「レシピを見る」からご覧頂けます。
+![recipe_index](https://github.com/Naoto3615/BabyCook/blob/master/recipe_index.png)
 
-* Configuration
+○レシピを投稿する
 
-* Database creation
+　レシピの投稿ができます。
+　トップページの「レシピを投稿する」からご覧頂けます。
+　各項目を入力して頂き、「投稿」ボタンを押してください。
+![recipe_post](https://github.com/Naoto3615/BabyCook/blob/master/recipe_post.png)　
 
-* Database initialization
+○ママ・パパシェフ一覧
 
-* How to run the test suite
+　ユーザーの一覧が表示されます。
+　トップページの「ママ・パパシェフ一覧」からご覧頂けます。
+ 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
