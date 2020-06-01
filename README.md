@@ -33,5 +33,5 @@
 
 　ユーザーの一覧が表示されます。
 　トップページの「ママ・パパシェフ一覧」からご覧頂けます。
- 
+ ![chef](https://github.com/Naoto3615/BabyCook/blob/master/chef.png)　
 
