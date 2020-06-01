@@ -1,11 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## :green_book: 詳しい内容：BabyCook
 
-Things you may want to cover:
+## :green_book: 開発環境
 
-* Ruby version
+- Ruby on rails
+- VSCode（Visual Studio Code）  
+
+## :green_book: アプリ機能
+![booksearch]
 
 * System dependencies
 
