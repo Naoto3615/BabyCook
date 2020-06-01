@@ -1,31 +1,32 @@
-%h2 〜アカウント情報変更〜
-= form_for(@user) do |user|
-  .nickname_field
-    = user.label :nickname, "ニックネーム"
-    %br/
-    = user.text_field :nickname, autofocus: true, autocomplete: "nickname"
-  .profile_field
-    = user.label :profile,"プロフィール"
-    %br/
-    = user.text_area :profile, autofocus: true, autocomplete: "profile"
-  .profile-image_field
-    = user.label :profile_image,"プロフィール画像"
-    %br/
-    = user.attachment_field :profile_image, autofocus: true
-  .email_field
-    = user.label :email,"メールアドレス"
-    %br/
-    = user.email_field :email, autofocus: true, autocomplete: "email"
-  .password_field
-    = user.label :password,"パスワード"
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} 文字以上)
-    %br/
-    = user.password_field :password, autocomplete: "new-password"
-  .field
-    = user.label :password_confirmation
-    %br/
-    = user.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = user.submit "アカウント更新"
+.account_edit  
+  %h2 〜アカウント情報変更〜
+  = form_for(@user) do |user|
+    .nickname_field
+      = user.label :nickname, "ニックネーム"
+      %br/
+      = user.text_field :nickname, autofocus: true, autocomplete: "nickname"
+    .profile_field
+      = user.label :profile,"プロフィール"
+      %br/
+      = user.text_area :profile, autofocus: true, autocomplete: "profile"
+    .profile-image_field
+      = user.label :profile_image,"プロフィール画像"
+      %br/
+      = user.attachment_field :profile_image, autofocus: true
+    .email_field
+      = user.label :email,"メールアドレス"
+      %br/
+      = user.email_field :email, autofocus: true, autocomplete: "email"
+    .password_field
+      = user.label :password,"パスワード"
+      - if @minimum_password_length
+        %em
+          (#{@minimum_password_length} 文字以上)
+      %br/
+      = user.password_field :password, autocomplete: "new-password"
+    .field
+      = user.label :"パスワード確認"
+      %br/
+      = user.password_field :password_confirmation, autocomplete: "new-password"
+    .actions
+      = user.submit "アカウント更新"

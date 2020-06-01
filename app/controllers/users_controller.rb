@@ -27,6 +27,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user = User.find_by(id:params[:id])
+    if @user.id == current_user.id
+      @user.destroy
+      redirect_to root_path
+    end
+  end
+
   private
   def user_params
     params.require(:user).permit(:nickname, :profile, :profile_image, :password, :password_confirmation, :email)
