@@ -1,0 +1,42 @@
+%h1.recipe_content-user
+  ="#{@user.nickname}さんのレシピ"
+
+.recipe_show
+  .recipe_title-show
+    =@recipe.title 
+  .recipe_image-show
+    =attachment_image_tag @recipe, :recipe_image,class:"recipe_images" 
+  .recipe_content-show
+    .recipe_content-show_subject
+      ・作り方
+    .recipe_content-show_description
+      =@recipe.content
+  .recipe_content-comment
+    -if current_user 
+      =form_for [@recipe, @comment] do |form| 
+        =form.text_area :comment, placeholder: "コメントする", rows: "5" ,class:"comment_field"
+        =form.submit "コメントする" 
+    -else 
+      %strong
+        %p
+          ="※※※ コメントの投稿には新規登録/ログインが必要です ※※※"
+  .recipe_content-comments        
+    %h4
+      <コメント一覧>
+    -if @comments
+      -@comments.each do |comment| 
+        %p
+          %strong
+            = link_to comment.user.nickname, "/users/#{comment.user_id}"
+            = comment.comment
+  
+    
+
+  - if current_user.id == @recipe.user_id
+    .recipe_edit_section
+      =link_to"編集",edit_recipe_path
+    .recipe_destroy_section
+      = link_to "削除", "/recipes/#{@recipe.id}", method: :delete 
+  - else
+    
+

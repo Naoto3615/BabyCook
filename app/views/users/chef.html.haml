@@ -1,0 +1,11 @@
+%h1
+  ママシェフ一覧
+.user_box
+  -@users.each do |user|
+    .users_index-box
+      .users_index-child
+        .user_nickname
+          =link_to user_path(user) do
+            =user.nickname
+        .user_profile-image
+          =attachment_image_tag user, :profile_image,class:"user_profile-images" 

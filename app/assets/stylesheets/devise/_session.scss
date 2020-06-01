@@ -1,0 +1,33 @@
+h2.session_title{
+  text-align:center;
+}
+
+@mixin login_contents{
+  font-size:15px;
+  color:blue;
+  font-weight:600;
+}
+
+.session_email{
+  @include login_contents;
+}
+.session_email-field{
+  height:30px;
+  width:200px;
+}
+
+.session_password{
+  @include login_contents;
+}
+
+.session_password-field{
+  height:30px;
+  width:200px;
+}
+
+.submit_login{
+  height:50px;
+  width:100px;
+  border-radius:50%;
+}
+

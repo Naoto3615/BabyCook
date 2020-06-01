@@ -1,0 +1,17 @@
+%h1.edit_title
+  ☆マイページ☆
+
+= form_for(@recipe) do |r|
+  .recipe_title-field
+    ✿レシピのタイトルを教えてください✿
+  =r.text_field :title
+  .recipe_content-field
+    ✿レシピの作り方を教えてください✿
+  =r.text_area :content
+  .recipe_image-field
+    ✿レシピの画像を選択してください✿
+  =r.attachment_field :recipe_image
+  .recipe_submit-button
+  =r.submit 
+
+  

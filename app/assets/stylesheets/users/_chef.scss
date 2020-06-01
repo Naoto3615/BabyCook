@@ -1,0 +1,21 @@
+.user_nickname{
+  text-align:center;
+  font-size:20px;
+}
+
+.user_profile-images{
+  width:250px;
+  height:250px;
+  border-radius: 50%;
+}
+.user_box{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.users_index-box{
+  width:250px;
+  height:auto;
+  margin-right:30px;
+  margin-top:50px;
+}

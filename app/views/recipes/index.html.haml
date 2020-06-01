@@ -1,0 +1,11 @@
+%h1.description
+  ママさん・パパさんが考えたレシピのアイデアを沢山載せています♪
+
+.recipe_index
+  - @recipes.each do |recipe|
+    .recipe_image
+      =link_to"/recipes/#{recipe.id}" do
+        =attachment_image_tag recipe, :recipe_image, class:"recipe_images" 
+      .recipe_image-title
+        =recipe.title
+

@@ -1,0 +1,71 @@
+h2.new-registration_title{
+  text-align:center;
+  font-size:30px;
+}
+
+.field{
+  text-align:center;
+  margin-top:20px;
+}
+
+@mixin name{
+  font-size:15px;
+  color:blue;
+  font-weight:600;
+}
+
+.registration_nickname{
+  @include name;
+}
+.registration_nickname-field{
+  height:30px;
+  width:200px;
+}
+
+.registration_profile{
+  @include name;
+}
+.registration_profile-field{
+  width:500px;
+  height:70px;
+}
+
+.registration_profile_image{
+  @include name;
+}
+
+.registration_email{
+  @include name;
+}
+.registration_email-field{
+  height:30px;
+  width:200px;
+}
+
+.registration_password{
+  @include name;
+}
+.registration_password-field{
+  height:30px;
+  width:200px;
+}
+
+.registration_password_confirmation{
+  @include name;
+}
+.registration_password_confirmation-field{
+  height:30px;
+  width:200px;
+}
+
+.actions{
+  text-align:center;
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+.registration_submit{
+  height:50px;
+  width:100px;
+  border-radius:50%;
+}

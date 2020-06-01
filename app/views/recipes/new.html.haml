@@ -1,0 +1,13 @@
+=form_for @recipes do |recipe|
+  .recipe_field
+    .recipe_title-field
+      ✿レシピのタイトルを教えてください✿
+    =recipe.text_field :title,class:"recipe_text-field"
+    .recipe_content-field
+      ✿レシピの作り方を教えてください✿
+    =recipe.text_area :content,class:"recipe_text-area"
+    .recipe_image-field
+      ✿レシピの画像を選択してください✿
+    =recipe.attachment_field :recipe_image
+    .recipe_submit-button
+    =recipe.submit :"レシピを投稿", class:"recipe_submit-btn"

@@ -1,0 +1,26 @@
+.recipe_show{
+  width:700px;
+  background-color:cornsilk;
+  margin:0 auto;
+}
+
+.recipe_title-show{
+  text-align:center;
+  padding-top:30px;
+  font-size:30px;
+}
+
+.recipe_image-show{
+  text-align:center;
+  margin-top:20px;
+}
+
+.recipe_content-show{
+  margin-left:10px;
+  &_subject{
+    font-size:20px;
+  }
+  &_description{
+    padding-bottom:20px;
+  }
+}
