@@ -12,4 +12,6 @@
 - if current_user.id == @user.id
   .user_edit
     =link_to"アカウント編集",edit_user_path,class:"user_edit-link"  
+  .user_destroy
+    =link_to"削除",user_path,method: :delete
 - else
