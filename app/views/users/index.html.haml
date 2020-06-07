@@ -1,3 +1,30 @@
+.header
+  .header_title
+    =link_to"ⒷⓐⓑⓨⒸⓞⓞⓚ","/",class:"header_title-title"
+  .header_nav-bar_search
+    = search_form_for(@search, url: set_search_users_path) do |f|
+      .header_nav-bar_search-content
+        =f.search_field :title_cont, placeholder:"検索する文字を入力して下さい"
+-if user_signed_in? 
+  .nav_bar
+    .nav_bar-recipe
+      = link_to"☆レシピを見る☆",recipes_path,class:"button"
+    .nav_bar-post
+      = link_to"☆レシピを投稿する☆",new_recipe_path,class:"button"
+    .nav_bar-chef
+      = link_to"☆ママ・パパシェフ一覧☆",chef_users_path,class:"button"
+    .nav_bar-logout
+      = link_to"☆ログアウト☆",destroy_user_session_path, method: :delete, class:"button"
+-else
+  .nav_bar-else
+    .nav_bar-recipe
+      = link_to"☆レシピを見る☆",recipes_path,class:"button"
+    .nav_bar-chef
+      = link_to"☆ママ・パパシェフ一覧☆",chef_users_path,class:"button"
+    .nav_bar-login
+      =link_to"☆ログイン☆",user_session_path,class:"button"
+    .nav_bar-registration
+      = link_to"☆新規会員登録☆",new_user_registration_path,class:"button"
 .flash_message
   %p
     =flash[:register]
