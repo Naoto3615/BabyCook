@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users, only:[:index, :show, :edit, :update, :destroy] do
     collection do
       get :chef
+      get :set_search
     end
   end
   post "recipes" => "recipes#create"
