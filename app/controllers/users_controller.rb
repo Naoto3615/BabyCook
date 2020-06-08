@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_action :set_search
+
   def index
    @recipes = Recipe.all.order(id: "DESC")
    @recipe = Recipe.find_by(id:params[:id])
@@ -33,6 +36,11 @@ class UsersController < ApplicationController
       @user.destroy
       redirect_to root_path
     end
+  end
+
+  def set_search
+    @search = Recipe.ransack(params[:q])
+    @results = @search.result(distinct: true)
   end
 
   private
