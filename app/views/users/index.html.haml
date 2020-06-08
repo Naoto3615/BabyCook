@@ -4,7 +4,7 @@
   .header_nav-bar_search
     = search_form_for(@search, url: set_search_users_path) do |f|
       .header_nav-bar_search-content
-        =f.search_field :title_cont, placeholder:"検索する文字を入力して下さい"
+        =f.search_field :title_cont, placeholder:"レシピ名を入力して下さい",class:"header_nav-bar_search-content_field"
 -if user_signed_in? 
   .nav_bar
     .nav_bar-recipe

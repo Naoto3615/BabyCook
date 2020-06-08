@@ -1,10 +1,16 @@
 .result
-  %h1.search_result
+  .search_result
     検索結果 : 
   .result_count
     ="#{@results.count}件"
 -if @results.any? 
   -@results.each do |result| 
-    =result.title
+    .result_contents
+      .result_contents-title
+        =result.title
+      .result_contents-image
+        =link_to "/recipes/#{result.id}" do
+          =attachment_image_tag result, :recipe_image, class:"result_contents-image_child"
+
 -else
   検索ワードに該当する部屋はありません

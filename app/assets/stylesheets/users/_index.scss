@@ -4,12 +4,21 @@
 .header{
   background-color:rgb(241, 199, 205);
   display:flex;
+  height:60px;
+}
+
+.header_nav-bar_search-content_field{
+  width:600px;
+  height:45px;
+  margin-top:7px;
+  margin-left:10px;
 }
 
 .header_title{
   font-size:30px;
   &-title{
     text-decoration:none;
+    line-height:60px;
   }
 }
 

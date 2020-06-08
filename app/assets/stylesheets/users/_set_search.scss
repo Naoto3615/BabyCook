@@ -1,0 +1,16 @@
+.result{
+  display:flex;
+  font-size:20px;
+  justify-content: center;
+  background-color:lightblue
+}
+
+.result_contents{
+  text-align:center;
+  margin-top:10px;
+  font-size:30px;
+  &-image_child{
+    width:300px;
+    height:300px;
+  }
+}
